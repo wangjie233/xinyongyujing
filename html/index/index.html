@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>泸州市信用信息监测预警平台</title>
+<!-- start head.html-->
+    <link type="text/css" href="../../css/less/commonn.css" rel="stylesheet">
+  
+    <!- -[if (gte IE 6)&(lte IE 8)]>
+    <!-- CSS3选择器支持，如使用请打开
+         非必要情况下一般不建议使用，IE8下会影响页面性能
+    <script type="text/javascript" src="../../js/common/nwmatcher.js"></script>
+    <script type="text/javascript" src="../../js/common/selectivizr-min.js"></script>
+    -->
+    <!-- 低版本浏览器兼容 Html5 新标签，如：article、footer、header、nav、section等
+         非必要情况下一般不建议使用
+    <script src="../../js/common/html5shiv.min.js"></script>
+    -->
+    <!--  ES5 的一些属性、方法。非必要情况下一般不建议使用
+    <script src="../../js/common/es5-sham.min.js"></script>
+    -->
+    <![endif]- ->
+<!-- end head.html-->
+    <link type="text/css" href="../../css/less/index.css" rel="stylesheet">
+</head>
+<body class='index'>
+<!-- start header.html-->
+<div class="header">
+	<div class="nav">
+		<p class='nav-child nav-left'><a href="./index.html"><i>地区信用监测预警</i></a></p>
+		<p class="center">
+			<span>泸州市信用信息监测预警平台</span>
+		</p>
+		<p class='nav-child nav-right'><a href="./platform.html"><i>平台建设监测预警</i> </a></p>
+	</div>
+</div>     
+<!-- end header.html-->
+<div class="main-wrap">
+    <div class="main-box clearfix">
+    	<div class="main-fl fl">
+    		<div class="ele">
+    			<h3 class='ele-tit'>各区信用排名</h3>
+					<div class="charts-box" id="gqxypm"></div>
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>失信企业预警</h3>
+				<div class='list-info'>
+					<p>
+						<span title="公司">公司</span>
+						<span title="法人代表">法人代表</span>
+						<span title="处罚类型">处罚类型</span>
+						<span title="统一社会信用代码">统一社会信用代码</span>
+						<span title="发布部门">发布部门</span>
+						<span title="发布时间">发布时间</span>
+					</p>
+					<div class='list-box'>
+						<ul></ul>	
+					</div>
+				</div>	
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>失信热词查询</h3>
+					<div class="charts-box" id="sxrc"></div>
+    		</div>
+    	</div>
+    	<div class="main-fc fl">
+    		<div class="ele-top mapbg">
+    			<div class="top-tit">
+    				<p>
+    					<span class='fl-e'><i>红榜数量</i><em id="warningNum1"></em></span>
+    					<span class='fr-e'><i>黑榜数量</i><em id="warningNum2"></em></span>
+    				</p>
+    				<p>
+    					<span class='fl-e'><i>行政许可</i><em id="warningNum3"></em></span>
+    					<span class='fr-e'><i>行政处罚</i><em id="warningNum4"></em></span>
+    				</p>
+    				<p>
+    					<span class='fl-e'><i>重大诚信事件</i><em id="warningNum5"></em></span>
+    					<span class='fr-e'><i>重大失信事件</i><em id="warningNum6">1,100</em></span>
+    				</p>
+    			</div>
+				<div id="tab-months">
+					<em class='tab-checked'></em>
+				</div>
+					<div class="charts-box" id="map"></div>
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>各区信用变化趋势</h3>
+					<div class="charts-box" id="gqxybhqs"></div>
+    		</div>
+    	</div>
+    	<div class="main-fr fr">
+    		<div class="ele">
+    			<h3 class='ele-tit'>信用信息预警</h3>
+    			<div class='tab-list'>
+    				<div class="nav-tab" id='tab-nav'>
+    					<em class='tab-checked'>重大失信</em>
+    					<em>重大诚信</em>
+    					<em>不良信息</em>
+    					<em>良好信息</em>
+    				</div>
+    				<div class='tab-box' id='tab-box'>
+    					<div class='tab-con' id='tab-info'>
+    						<ul></ul>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>重大信用事件预警 <p class='tab-nav' id='tab-nav2'><em class='tab-checked' data-value='1'>不良</em><em data-value='2'>良好</em></p></h3>
+					<div class="charts-box" id="zdxysj">
+						<div class="zdxysj-wrap">
+							<div class="charts" id="zdxysj1"></div>
+						</div>
+						<div class="zdxysj-wrap">
+							<div class="charts" id="zdxysj2"></div>
+						</div>
+						<div class="zdxysj-wrap">
+							<div class="charts" id="zdxysj3"></div>
+						</div>
+						<div class="zdxysj-wrap">
+							<div class="charts" id="zdxysj4"></div>
+						</div>
+					</div>
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>失信高发领域预警</h3>
+					<div class="charts-box" id="sxgfly"></div>
+    		</div>
+    	</div>
+    </div>
+</div>
+<script src='../../js/common/jquery.js' ></script>
+<script src='../../js/common/common.js' ></script>
+<script src='../../js/common/echarts.min.js' ></script>
+<script src='../../js/index/index.js' ></script>
+</body>

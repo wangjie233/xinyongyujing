@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>泸州市信用信息监测预警平台</title>
+<!-- start head.html-->
+    <link type="text/css" href="../../css/less/commonn.css" rel="stylesheet">
+  
+    <!- -[if (gte IE 6)&(lte IE 8)]>
+    <!-- CSS3选择器支持，如使用请打开
+         非必要情况下一般不建议使用，IE8下会影响页面性能
+    <script type="text/javascript" src="../../js/common/nwmatcher.js"></script>
+    <script type="text/javascript" src="../../js/common/selectivizr-min.js"></script>
+    -->
+    <!-- 低版本浏览器兼容 Html5 新标签，如：article、footer、header、nav、section等
+         非必要情况下一般不建议使用
+    <script src="../../js/common/html5shiv.min.js"></script>
+    -->
+    <!--  ES5 的一些属性、方法。非必要情况下一般不建议使用
+    <script src="../../js/common/es5-sham.min.js"></script>
+    -->
+    <![endif]- ->
+<!-- end head.html-->
+    <link type="text/css" href="../../css/less/platform.css" rel="stylesheet">
+</head>
+<body class='platform'>
+<!-- start header.html-->
+<div class="header">
+	<div class="nav">
+		<p class='nav-child nav-left'><a href="./index.html"><i>地区信用监测预警</i></a></p>
+		<p class="center">
+			<span>泸州市信用信息监测预警平台</span>
+		</p>
+		<p class='nav-child nav-right'><a href="./platform.html"><i>平台建设监测预警</i> </a></p>
+	</div>
+</div>     
+<!-- end header.html-->
+<div class="main-wrap">
+    <div class="main-box clearfix">
+    	<div class="main-fl fl">
+    		<div class="ele">
+    			<h3 class='ele-tit'>信用开放门户运行监测预警 <span>正常</span></h3>
+					<div class="charts-box" id="xymhyx"></div>
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>共享交换平台运行监测预警<span class="">正常</span></h3>
+					<div class="charts-box" id="gxjhptyx"></div>
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>各地区数据接入情况监测</h3>
+    			<h4 class='tab-wrap'><span id="areaName"></span><p class='tab-nav' id='tab-nav'><em class='tab-checked' data-value='1'>按月</em><em data-value='2'>按天</em></p></h4>
+					<div class="charts-box tab-charts-box" id="gdqsjjrqk"></div>
+    		</div>
+    	</div>
+    	<div class="main-fc fl">
+    		<div class="ele-top mapbg">
+    			<div class="top-tit tit2">
+    				<p>
+    					<em class='t-em'>已接入市直单位</em>
+							<em class='b-em'><i id="b-em">--</i>个</em>
+    				</p>
+    				<p>
+    					<em class='t-em'>已接入区县</em>
+    					<em class='b-em b-em2'><i id="b-em2">--</i>个</em>
+    				</p>
+    				<p>
+    					<em class='t-em'>入库数据总量</em>
+    					<em class='b-em b-em3'><i id="b-em3">--</i>万条</em>
+    				</p>
+    			</div>
+					<p class='tab-nav' id='tab-nav2'><em class='tab-checked' data-value='1'>地区</em><em data-value='2'>单位</em></p>
+					<div class="charts-box" id="map"></div>
+					<div class="company-wrap" id="company">
+						<div class="charts-box company-box"  style="width: 890px">
+						<div class="company-top">
+							<span class="company" id="com1"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com2"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com3"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com4"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com5"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com6"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com7"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com8"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com9"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com10"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com11"><span class="com-wrap"><span class="com-text"></span></span></span>
+						</div>
+						<div class="company-right">
+							<span class="company" id="com12"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com13"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com14"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com15"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com16"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com17"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com18"><span class="com-wrap"><span class="com-text"></span></span></span>
+						</div>
+						<div class="company-bottom">
+							<span class="company" id="com19"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com20"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com21"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com22"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com23"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com24"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com25"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com26"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com27"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com28"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com29"><span class="com-wrap"><span class="com-text"></span></span></span>
+						</div>
+						<div class="company-left">
+							<span class="company" id="com30"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com31"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com32"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com33"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com34"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com35"><span class="com-wrap"><span class="com-text"></span></span></span>
+							<span class="company" id="com36"><span class="com-wrap"><span class="com-text"></span></span></span>
+						</div>
+					</div>
+					</div>
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>数据接入总量情况监测</h3>
+    			<h4 class='tab-wrap'><p class='tab-nav' id='tab-nav3'><em class='tab-checked' data-value='1'>按月</em><em data-value='2'>按天</em></p></h4>
+					<div class="charts-box tab-charts-box" id="sjjrzlqk"></div>
+    		</div>
+    	</div>
+    	<div class="main-fr fr">
+    		<div class="ele">
+    			<h3 class='ele-tit'>各单位入库数据量监测（当月）</h3>
+					<div class="charts-box" id="gdwrksj"></div>
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>各地区入库数据量监测（当月）</h3>
+					<div class="charts-box" id="gdqrksj"></div>
+    		</div>
+    		<div class="ele">
+    			<h3 class='ele-tit'>信用信息分类情况监测</h3>
+					<div class="charts-box" id="xyxxfljc"></div>
+    		</div>
+    	</div>
+    </div>
+</div>
+<script src='../../js/common/jquery.js' ></script>
+<script src='../../js/common/common.js' ></script>
+<script src='../../js/common/echarts.min.js' ></script>
+<script src='../../js/index/platform.js' ></script>
+</body>
